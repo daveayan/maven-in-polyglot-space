@@ -1,0 +1,5 @@
+println("")
+println("")
+println ("Hello from SCALA - execution of local script")
+println("")
+println("")

@@ -1,0 +1,10 @@
+========================================================================================
+INSTALL:
+$ mvn clean install
+
+RUN:
+$ mvn com.quicksolutions.maven.plugin:jruby-mojo:1.0-SNAPSHOT:sayhi
+
+KNOWN ISSUES:
+-- This plugin works with Maven 2.2.1. It does not work with maven 3.0.1 or higher or polyglot maven
+========================================================================================

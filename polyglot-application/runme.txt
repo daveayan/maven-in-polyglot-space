@@ -1,0 +1,27 @@
+========================================================================================
+COMPILE:
+$ mvn clean package
+
+CHECK:
+$ unzip -l target/polyglot-application-1.0-SNAPSHOT.jar
+-- Running the above command you should see a list of files in this jar
+-- The jar should have class files for all the java, groovy and scala code
+-- in package folders
+
+TRANSLATE pom.xml TO pom.groovy:
+$ translate pom.xml pom.groovy
+$ mvn -f pom.groovy clean package
+$ unzip -l target/polyglot-application-1.0-SNAPSHOT.jar
+$ translate pom.groovy pom-restore-from-groovy.xml
+
+TRANSLATE pom.xml TO pom.scala:
+$ translate pom.xml pom.scala
+$ mvn -f pom.scala clean package
+$ unzip -l target/polyglot-application-1.0-SNAPSHOT.jar
+$ translate pom.scala pom-restore-from-scala.xml
+
+KNOWN ISSUES:
+-- In pom.scala in m.pluginRepository and m.repository it should be r.enabled = "true". The value true and false in these lines should be string
+
+-- When pom.scala is converted back to pom.xml, in build plugin org.scala-tools:maven-scala-plugin the id's are missing for compile, testCompile and doc executions. These do exist in pom.scala
+========================================================================================

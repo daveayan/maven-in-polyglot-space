@@ -1,0 +1,50 @@
+========================================================================================
+Introduction to Maven:
+- Build Lifecycle, Dependency Management, pom.xml, groupid, artifactid, version
+
+Maven Scripting:
+- In groovy, scala
+
+Building a Polyglot Application:
+- Building an application having java, groovy and scala code
+
+Polyglot Maven:
+- pom.xml as pom.groovy or pom.scala
+
+Writing Maven plugins:
+- In Java, groovy, jruby
+
+Maven Android
+- Create an Android Application
+- Start emulator and deploy application
+
+Maven vs Other tools (Gradle):
+- Maven has archetype support
+- Better Maven IDE support - M2Eclipse
+
+References:
+http://scala-tools.org/mvnsites/maven-scala-plugin/index.html
+
+---- TRY THESE:
+MAVEN ANDROID
+-- http://code.google.com/p/maven-android-plugin/
+-- https://github.com/akquinet/android-archetypes/wiki
+-- mvn archetype:generate -DarchetypeArtifactId=android-quickstart -DarchetypeGroupId=de.akquinet.android.archetypes -DarchetypeVersion=1.0.5 -DgroupId=com.quicksolutions.maven.android -DartifactId=example-android-application
+-- https://github.com/mosabua/maven-android-sdk-deployer
+
+MAVEN GEMS
+-- https://github.com/jruby/maven_gem
+-- https://github.com/joekhoobyar/maven-gem-plugin
+
+MAVEN FLEX
+-- http://ria.dzone.com/articles/flex-and-maven
+mvn archetype:generate -DarchetypeRepository=http://repository.sonatype.org/content/groups/public -DarchetypeGroupId=org.sonatype.flexmojos -DarchetypeArtifactId=flexmojos-archetypes-application -DarchetypeVersion=3.7.1
+
+************** PENDING **************
+-- groovy-mojo
+-- jruby compile within polyglot application
+-- use MavenProject with java-mojo, groovy-mojo, jruby-mojo, scala-mojo
+-- Flex pom package errors
+*************************************
+
+========================================================================================

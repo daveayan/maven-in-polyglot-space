@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<project name="maven-antrun-" default="main"  >
+<target name="main" unless="maven.test.skip">
+  <echo message="To skip me, just call mvn -Dmaven.test.skip=true"/>
+</target>
+</project>
